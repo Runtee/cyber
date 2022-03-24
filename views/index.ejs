@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<%- include('layouts/head home'); -%>
+<title>home</title>
+
+  <body>
+    <div class="b-example-divider"></div>
+    <%- include('layouts/header home'); -%> 
+    <% if(loggedIn) { %>
+      <%- include('layouts/sidebar'); -%>
+      <% } %>
+    <img style="width: 100%; position: inherit;" src="img/security.jpg" alt="security pic">
+    <div class="container2">
+      <br><br>
+      <div style="text-align: center;">
+        <h1>Security Awareness and Training</h1>
+        <br>
+        <h2>Welcome to our online cybercrime awareness training.</h>
+      </div>
+      <br><br>
+      <p>Research has shown that 90% of data breaches are caused by human error. Eventually, security is a big problem
+        to humans.
+        cybercrime is a problem because this crimes are carried out everyday and different techniques are being
+        introduced to get
+        to unsuspecting victims. So typically, we need to be Argus-eyed everytime and also be attentive to be able to
+        discern or detect
+        their diverse methods so that you can protect yourself from attacks at all time.
+        <br> The aim of this Security Awareness Program is to raise your information Security awareness on crimes like
+        email phishing
+        and help you to understand how and why criminals target your business.
+      </p>
+      <p>You will learn how to keep your data safe, how to mange your digital exporation or footprint and what to do
+        when
+        you are hacked, how to avoid downloading malwares into your computer and
+        how to avoid giving away passwords of your accounts and how to manage passwords.</p>
+      <br><br>
+      <div class="col-md-6">
+        <div class="h-100 p-1 text-white bg-dark rounded-3">
+          <h2>Attack Simulation.</h2>
+          <p class="p1">Simulated attacks like email phishing etc. </p>
+        </div>
+      </div>
+      <br>
+
+      <div class="col-md-6">
+        <div class="h-100 p-1 text-white bg-dark rounded-3">
+          <h2>Security Awareness.</h2>
+          <p class="p1">Cyberware supports employee awareness and
+            performance on security awareness at all levels.</p>
+        </div>
+      </div>
+      <br>
+      <div class="col-md-6">
+        <div class="h-100 p-1 text-white bg-dark rounded-3">
+          <h2>Employee Training.</h2>
+          <p class="p1">Interactive web based training modules on different
+            security topics (videos, tests, games, quizzes etc.) that will help
+            employees spot the ways hackers can attact your network</p>
+        </div>
+      </div>
+      <br>
+      <div class="col-md-6">
+        <div class="h-100 p-1 text-white bg-dark rounded-3">
+          <h2>Engage Employees.</h2>
+          <p class="p1">Understand how to manage your digital footprint and how
+            to keep your data secure at work and home</p>
+        </div>
+      </div>
+      <br><br><br>
+      <div class="col-md-6">
+        </div>
+      <br><br><br><br><br><br>
+
+      <%- include('layouts/footer'); -%>
+
+  </body>
+
+</html>

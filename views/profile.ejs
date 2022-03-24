@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/head'); -%>
+
+<title>profile</title>
+<link rel="stylesheet" href="css/profile.css">
+
+
+<body>
+    <style>
+        .checkmark{
+        font-size: 20px;
+         color: green; 
+         font-weight: bolder;
+        text-decoration: none;
+        }
+         .bad{
+        font-size: 20px;
+         color: red; 
+         font-weight: bold;
+         }
+    </style>
+    <%- include('layouts/header'); -%>
+<%- include('layouts/sidebar'); -%>
+<% if(errors != null && errors.length > 0){ %>
+    <ul class="list-group"></ul>
+    <% for (var i = 0; i < errors.length; i++) { %>
+    <li class="list-group-item list-group-item-danger"><%= errors[i] %></li>
+    <% } %>
+    </ul>
+    <% } %>
+   </div>
+   <% if(success != null && success.length > 0){ %>
+    <ul class="list-group"></ul>
+    <% for (var i = 0; i < success.length; i++) { %>
+    <li class="list-group-item list-group-item-success"><%= success[i] %></li>
+    <% } %>
+    </ul>
+    <% } %>
+   </div>
+    <div class="container" style='border:1px solid;background-color: whitesmoke;'>
+        <form action="/profile" method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-4 mt-1">
+                <div class="card text-center sidebar">
+                    <div class="card-body">
+                        <img src="<%=user.picture %>" class="rounded-circle" width="150">
+                        <div class="mt-4">
+                            <input type="file" name="picture" value="NSS" style="width: 70px;">
+
+                            <h3><%=user.fullName %></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 mt-1">
+                <div class="card mb-3 content">
+                    <h1 class="m-3 pt-3">About</h1>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Name</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                               <input name='given_name' value="<%= user.fullName %>">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Email</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                <input type="email" name="email" value="<%=user.email %>">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Phone</h5>
+                            </div> 
+                            <div class="col-md-9 text-secondary">
+                                <input type="" name="phone" value="<%=user.phone %>">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Gender</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                <input name="sex" value="<%=user.sex %>">
+                            </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Address</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                <input name="address" value="<%=user.address %>">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 content">
+                    <h1 class="m=3">Progress</h1>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Phishing</h5> 
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                Completed <% if(quiz.Phishing ){ %>
+                                    <a class="checkmark"> &checkmark; </a>                                    <% } %>
+                                    <% if(!quiz.Phishing ){ %>
+                                    <span class="bad">x</span>
+                                    <% } %> 
+                            </div>
+                            <div class="col-md-3">
+                                <h5>Malware</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                Completed
+                                <% if(quiz.Malware ){ %>
+                                    <a class="checkmark"> &checkmark; </a>                                    <% } %>
+                                    <% if(!quiz.Malware ){ %>
+                                    <span class="bad">x</span>
+                                    <% } %> 
+                            </div>
+                            <div class="col-md-3">
+                                <h5>Spoofing</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                Completed
+                                <% if(quiz.Spoofing ){ %>
+                                    <a class="checkmark"> &checkmark; </a>                                    <% } %>
+                                    <% if(!quiz.Spoofing ){ %>
+                                    <span class="bad">x</span>
+                                    <% } %> 
+                            </div>
+                            <div class="col-md-3">
+                                <h5>Denial Of Service Attack</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                Completed
+                                <% if(quiz.Dos ){ %>
+                                    <a class="checkmark"> &checkmark; </a>                                    <% } %>
+                                    <% if(!quiz.Dos ){ %>
+                                    <span class="bad">x</span>
+                                    <% } %> 
+                            </div>
+                            <div class="col-md-3">
+                                <h5>Hacking</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                Completed <% if(quiz.Hacking ){ %>
+                                    <a class="checkmark"> &checkmark; </a>                                    <% } %>
+                                    <% if(!quiz.Hacking ){ %>
+                                    <span class="bad">x</span>
+                                    <% } %> 
+                            </div>
+                            <div class="col-md-3">
+                                <h5>Social Engineering</h5>
+                            </div>
+                            <div class="col-md-9 text-secondary">
+                                Completed
+                                <% if(quiz.Social ){ %>
+                                    <a class="checkmark"> &checkmark; </a>                                    <% } %>
+                                    <% if(!quiz.Social ){ %>
+                                    <span class="bad">x</span>
+                                    <% } %> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <div style="background-color: none; margin-left: 500px;">
+    <button class="btn" style="background-color: rgb(66, 65, 65);color: white;" type="submit">
+submit
+    </button></div>
+</div>
+<br>
+</form>
+    </div>
+<%- include('layouts/footer'); -%> 
+
+</body>
+
+</html>

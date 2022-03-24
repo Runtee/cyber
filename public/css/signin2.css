@@ -1,0 +1,28 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  .login_wrapper a i {
+    float: right;
+    margin: 0;
+    line-height: 35px
+}
+
+.login_wrapper a.google-plus {
+    background: #db4c3e;
+    border: 1px solid #db4c3e
+}
+
+.login_wrapper a.google-plus:hover {
+    background: #bd4033;
+    border-color: #bd4033
+}

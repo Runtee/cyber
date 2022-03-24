@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/head'); -%> 
+<title>quiz</title>
+<link rel="stylesheet" href="css/quiz.css">
+<style>
+    
+</style>
+<body onload="myFunction()" style="margin: 0; background-image: url('../public/img/security.jpg');">
+    <%- include('layouts/header'); -%>
+    <%- include('layouts/sidebar'); -%> 
+    <div id="loader"></div>
+    <div style="display: none;" class="animate-buttom" id="myDiv">
+            <!-- <img src="security.jpg" alt="img" id="img" class="img"> -->
+            <h1 id="title">Denial-of-Service Quiz</h1>
+        
+            <!-- quiz-container -->
+            <div id="quiz-container" >
+                <!-- question container -->
+                <div class="questions">
+                    <h2 id="question"></h2>
+                    <ol type="A">
+                        <li class="option"><span id="option0" onclick="calcScore(this)"></span></li>
+                        <li class="option"><span id="option1" onclick="calcScore(this)"></span></li>
+                        <li class="option"><span id="option2" onclick="calcScore(this)"></span></li>
+                        <li class="option"><span id="option3" onclick="calcScore(this)"></span></li>
+                    </ol>
+                    <h4 id="start"></h4>
+                </div>
+        
+                <div class="buttons">
+                    <button type="button" class="next">Next</button>
+                </div>
+                <br>
+            </div>
+        
+            <!-- scoreboard section -->
+            <div id="scoreboard">
+                <img src="img/security.jpg" alt="">
+                <h2 id="score-title">Your Score</h2>
+                
+                
+                <h2 id="score"></h2>
+               
+                <button type="button" id="check-answer" onclick="checkAnswer()">Check Answers</button>
+            </div>
+        
+            <!-- answers section -->
+            <div id="answerBank">
+                <form action="/quiz" method="post">
+                <h2>Answers :</h2>
+                <ol type="1" id="answers">
+        
+                </ol>
+                <input hidden id="score-total" name="Dos" >
+                <button type="button" id="score-btn" onclick="backToQuiz()">End Quiz</button>
+            </form>
+            </div>
+    </div>
+    <%- include('layouts/footer'); -%> 
+    <script type="text/javascript"> 
+
+    var myVar;
+    function myFunction() {
+        myVar = setTimeout(showPage, 500).style.display ="none";
+    }
+    function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+    }
+    </script>
+    <!-- javascript file source -->
+    <script src="js/quiz dos.js"></script>
+
+</body>
+</html>

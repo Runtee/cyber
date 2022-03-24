@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+  <%- include('layouts/head'); -%> 
+  <title>Denial of Service</title>
+<body>
+
+  <%- include('layouts/header'); -%> 
+  <%- include('layouts/sidebar'); -%> 
+  <img style="width: 100%; position: inherit;" src="img/security.jpg" alt="security pic">
+  <div class="container2">
+    <div>
+      <br><br>
+
+      <h1 class="centered">What Is a Denial-of-Service (DoS) Attack?</h1>
+      <br><br>
+      <p>A denial-of-service attack is designed to slow or take down machines or networks making them inaccessible
+        for the people who need them. Information systems, devices or other resources on the network or machine — email,
+        online accounts, ecommerce sites, and other services — become unusable in a DoS condition. While direct theft
+        or data loss may not necessarily be the goal of a DoS attack, one can severely impact the targeted organization
+        financially as it spends time and money getting back on its feet. Loss of business, frustrated customers and
+        reputational harm are additional costs.
+      </p>
+      <br>
+      <br>
+      <h2 style="text-align: center;">How does this DoS Attack happen?</h2>
+      <p>Denial-of-service attacks tend to target web servers of high-profile organizations, such as banking,
+        e-commerce and media companies, as well as government entities. Perpetrators go after organizations’ assets
+        in one of two ways: either by overwhelming their networks with large volumes of traffic or by sending nefarious
+        data like bugs that will trigger a crash. No matter the method, the intended outcome is the same: to take the
+        network or machine down. Additional networks or assets not actually targeted by the DoS attackers may also be
+        impacted if the DoS victim is, say, an internet or cloud service provider for others.</p>
+      <br>
+      <p>A potentially more dangerous form of a DoS attack is known as a distributed denial-of-service attack (DDoS).
+        In these commonly attempted cases, an attack — perpetrated by multiple systems as opposed to a basic DoS
+        attack — can impact or completely take out of service any internet-facing service. DDoS attacks may also be
+        used to distract organizations from other criminal activity, such as data theft or network infiltration.</p>
+      <br>
+      <p>The biggest DDoS attack in history occurred in February 2020, when Amazon Web Services says it fended off
+        a three-day DDoS attack that peaked at a volume of 2.3 terabytes per second.</p>
+      <br>
+      <h2 style="text-align: center;">Types of Spoofing Attacks</h2>
+      <p>DoS attacks can occur in many different forms and various types. Here are some examples
+        of different types of DoS attacks you should know:</p>
+    </div>
+    <div class="phishing-types">
+      <ul>
+        <b>
+          <li>Volume-based attacks:</li>
+        </b>
+        <p> These use large amounts of fake traffic to overwhelm an online resource, like a server or website.
+          The volume of the attack is measured in bits per second.
+        </p>
+        <b>
+          <li>Protocol or network-layer attacks:</li>
+        </b>
+        <p> These send large numbers of packets to network infrastructure and infrastructure management tools.
+          Their size is measured in packets per second (PPS) and include Smurf DDoS attacks (network-layer attacks
+          designed to flood a targeted server with error messages) and SYN floods (which tie up networks with
+          half-opened
+          connection requests).
+        </p>
+        <b>
+          <li>Application-layer attacks:</li>
+        </b>
+        <p>These are similar to volume-based attacks but are conducted by flooding applications with malicious requests.
+          Their size is measured in requests per second (RPS).
+        </p>
+      </ul>
+    </div>
+    <br><br><br><br>
+    <img style="width: 100%; position: inherit;" src="img/security.jpg" alt="security pic"><br><br><br><br>
+    <h1 style="text-align: center;">DoS Attack Prevention and Protection</h1>
+    <p>Organizations can take the following actions toward denial-of-service attack protection and prevention:</p>
+    <ul style="list-style-type: none;">
+      <li><b>1. Monitor and analyze network traffic: </b> Network traffic can be supervised via a firewall or intrusion
+        detection
+        system. Administrators can set up rules that create alerts for unusual traffic, identify traffic sources or drop
+        network packets that meet a certain criteria.</li><br>
+      <li><b>2. Strengthen their security posture: </b> This includes fortifying all internet-facing devices to prevent
+        compromise,
+        installing and maintaining antivirus software, establishing firewalls configured to protect against DoS attacks
+        and
+        following robust security practices to monitor and manage unwanted traffic.</li><br>
+      <li><b>3. Monitor traffic: </b> Organizations can enroll in a service that detects or redirects the abnormal
+        traffic flows
+        typically associated with a DoS attack, while allowing normal traffic to proceed on the network.</li><br>
+      <li><b>4. Establish a DoS attack response plan: </b> The key is to create and also practice a disaster recovery
+        plan for DoS
+        attack that covers communication, mitigation and recovery.</li><br>
+    </ul>
+    <br><br><br><br>
+    <img style="width: 100%; position: inherit;" src="img/security.jpg" alt="security pic"><br><br><br><br>
+  </div>
+  <br><br><br>
+  <div class="col-md-6">
+    <div class="h-100 mb-4 bg-light border rounded-1 centered" >
+      <h2>Congratulation</h2>
+      <p>If you are seeing this message, it means you have completed your training on phishing.
+        Click on the Quiz button below to finish up your Phishing training.</p>
+    </div>
+    <div class="continue-button centered">
+      <a href="/loader-dos" class="button">Quiz</a>
+    </div>
+  </div>
+  <br><br>
+
+  <%- include('layouts/footer'); -%> 
+
+</body>

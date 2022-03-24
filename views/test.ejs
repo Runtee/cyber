@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<%- include('layouts/head'); -%>
+  <title>Change password </title>
+
+  <body style="background-image: url('img/security.jpg'); background-size: contain;">
+    <%- include('layouts/header'); -%>
+      <%- include('layouts/sidebar'); -%>
+        <link rel="stylesheet" href="css/style.css">
+
+        <style>
+          .con {
+            margin-left: 200px;
+            text-align: left;
+            border: 5px solid #bae3f0;
+            margin-top: 20px;
+            display: inline-block;
+            background-color: aliceblue;
+            padding: 15px;
+
+           
+          }
+          @media (max-width: 800px) {
+            .con {
+              transition:all;
+             margin-left: 20px; 
+          }}
+          .table a{
+            color: black;
+            text-decoration: none;
+            font-size: large;
+          }
+        
+          .bad {
+            color: red;
+          }
+
+        </style>
+
+        <div class="con">
+          <table class="table table-striped table-hover table-success" style="text-align: center;">
+            <caption class=".caption-top">All Tests</caption>
+            <tr>
+              <th>
+                TEST
+              </th>
+              <th>
+                COMPLETED
+              </th>
+              <th>
+                SCORE
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <a class='link' href='/loader-why'> Why your business is at serious risk </a>
+              </td>
+              <td>
+                <% if(quiz.Why ){ %>
+                &checkmark;
+                <% } %>
+                <% if(!quiz.Why ){ %>
+                <span class="bad">x</span>
+                <% } %>
+              </td>
+              <td>
+                <% if(quiz.Why ){ %>
+                  <%=quiz.Why%>
+                  <% } %>
+              </td>
+            </tr>
+         
+            <tr>
+              <td>
+                <a class='link' href='/loader-phishing'>Phishing Attack</a>
+              </td>
+              <td>
+                <% if(quiz.Phishing ){ %>
+                &checkmark;
+                <% } %>
+                <% if(!quiz.Phishing ){ %>
+                <span class="bad">x</span>
+                <% } %>
+              </td>
+              <td>
+                <% if(quiz.Phishing ){ %>
+                  <%=quiz.Phishing%>
+                  <% } %>
+              </td>
+            <tr>
+              <td>
+                <a class='link' href='/loader-malware'>Malware Attack</a>
+              </td>
+              <td>
+                <% if(quiz.Malware ){ %>
+                &checkmark;
+                <% } %>
+                <% if(!quiz.Malware ){ %>
+                <span class="bad">x</span>
+                <% } %>
+              </td>
+              <td>
+                <% if(quiz.Malware ){ %>
+                  <%=quiz.Malware%>
+                  <% } %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a class='link' href='/loader-spoofing'>Spoofing Attack
+                </a>
+
+              </td>
+              <td>
+                <% if(quiz.Spoofing ){ %>
+                &checkmark;
+                <% } %>
+                <% if(!quiz.Spoofing ){ %>
+                <span class="bad">x</span>
+                <% } %>
+              </td>
+              <td>
+                <% if(quiz.Spoofing ){ %>
+                  <%=quiz.Spoofing%>
+                  <% } %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a class='link' href='/loader-dos'>Denial Of Service Attack</a>
+              </td>
+              <td>
+                <% if(quiz.Dos ){ %>
+                &checkmark;
+                <% } %>
+                <% if(!quiz.Dos ){ %>
+                <span class="bad">x</span>
+                <% } %>
+              </td>
+              <td>
+                <% if(quiz.Dos ){ %>
+                  <%=quiz.Dos%>
+                  <% } %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a class='link' href='/loader-hacking'>Hacking Attack</a>
+              </td>
+              <td>
+                <% if(quiz.Hacking ){ %>
+                &checkmark;
+                <% } %>
+                <% if(!quiz.Hacking ){ %>
+                <span class="bad">x</span>
+                <% } %>
+              </td>
+              <td>
+                <% if(quiz.Hacking ){ %>
+                  <%=quiz.Hacking%>
+                  <% } %>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a class='link' href='/loader-social'>Social Engineering</a>
+              </td>
+              <td>
+                <% if(quiz.Social ){ %>
+                &checkmark;
+                <% } %>
+                <% if(!quiz.Social ){ %>
+                <span class="bad">x</span>
+                <% } %>
+              </td>
+              <td>
+                <% if(quiz.Social){ %>
+                  <%=quiz.Social%>
+                  <% } %>
+              </td>
+            </tr>
+
+          </table>
+        </div>
+        <!-- partial -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.2.0/picturefill.min.js'></script>
+        <script src="./script.js"></script>
+        <script src="script.js"></script>
+
+
+        <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+  </body>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <%- include('layouts/head'); -%> 
+<title>Dashboard</title>
+<body>
+  <%- include('layouts/header'); -%> 
+  <%- include('layouts/sidebar'); -%> 
+
+  <img style="width: 100%; position: absolute;" src="img/security.jpg" alt="security pic"><br><br>
+<!-- partial -->
+<div class="col-lg-8 col-md-10 mx-auto">
+  <% if(errors != null && errors.length > 0){ %>
+  <ul class="list-group"></ul>
+  <% for (var i = 0; i < errors.length; i++) { %>
+  <li class="list-group-item list-group-item-success"><%= errors[i] %></li>
+  <% } %>
+  </ul>
+  <% } %>
+ </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.2.0/picturefill.min.js'></script><script  src="./script.js"></script>
+
+        <script src="assets/dist/js/bootstrap.bundle.min.js"></script>      
+        </body>

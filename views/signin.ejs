@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://www.google.com">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Sign In</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
+    <link rel= 'stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <!-- Bootstrap core CSS -->
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-social.css" rel="stylesheet">
+
+    
+    <!-- Custom styles for this template -->
+    <link href="css/signin.css" rel="stylesheet">
+    <link href="css/signin2.css" rel="stylesheet">
+
+  </head>
+  <body class="text-center">
+    <%- include('layouts/header home'); -%> 
+ <br>
+ <div class="col-lg-8 col-md-10 mx-auto">
+  <% if(errors != null && errors.length > 0){ %>
+  <ul class="list-group"></ul>
+  <% for (var i = 0; i < errors.length; i++) { %>
+  <li class="list-group-item list-group-item-danger"><%= errors[i] %></li>
+  <% } %>
+  </ul>
+  <% } %>
+ </div>
+<main class="form-signin">
+  <form action="/login/post" method="post">
+    <h1 class="bg-dark text-white rounded-1">Cyberware</h1>
+    <br>
+    <h1 class="h3 mb-3 fw-normal"  style="color: white;">Please sign in</h1>
+<br>
+    <div class="form-floating">
+      <input type="" class="form-control" name = username id="floatingInput" required placeholder="username">
+      <label for="floatingInput">Username</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" required name="password" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <div class="checkbox mb-3" style="color: white;">
+      <label>
+        <input type="checkbox" value="remember-me" > Remember me
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <a style="text-decoration: none;" href="/signup"> Don't Have An Account? Sign Up
+      <i class="fa fa-cog" aria-hidden="true"></i>
+    </a>
+    <p class="mt-5 mb-3 text-muted" style="color: white;">&copy; 2021-2020</p>
+  </form>
+</main>
+
+
+
+<%- include('layouts/footer'); -%> 
+
+    
+  </body>
+</html>
