@@ -58,7 +58,7 @@ const profilePostController = require('./controllers/profilePostController');
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
-app.listen(3000, () => {
+app.listen(3000||process.env.PORT, () => {
   console.log('App listening on port 3000')
 })
 app.use(expressSession({
