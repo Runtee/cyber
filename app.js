@@ -19,11 +19,15 @@ mongoose.connect('mongodb+srv://runtee:'+process.env.PASSWORD+'@cluster0.wvqt2.m
       console.log(err);
   }
 });
+
 // mongoose.connect('mongodb://localhost:27017/Cyberware',
 //  { useNewUrlParser: true, useUnifiedTopology: true },(err,db)=>{
 //   if (db){
   
 //     console.log('database connected successfully')
+//   }
+//   else{
+//     console.log('err')
 //   }
 // });
 
@@ -58,8 +62,8 @@ const profilePostController = require('./controllers/profilePostController');
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
-app.listen(process.env.PORT || 3000, () => {
-  console.log('App listening on port 3000')
+app.listen(process.env.PORT || 5000, () => {
+  console.log('App listening on port 5000')
 })
 app.use(expressSession({
   secret: 'beauty101',
@@ -94,7 +98,7 @@ app.get('/socialengineering',authMiddleware, socialengineering)
 app.get('/spoofing',authMiddleware, spoofing);
 app.get('/users',authMiddleware, pFormController)
 app.post('/quiz',authMiddleware,loader)
-app.post('/register', authMiddleware,registerController)
+app.post('/register',registerController)
 app.post('/register-profile',authMiddleware,createProfile)
 app.post('/change-password',authMiddleware,passqordC)
 app.get('/change-password',authMiddleware,changePassword)

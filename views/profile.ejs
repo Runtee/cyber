@@ -110,64 +110,79 @@
                                 <h5>Phishing</h5> 
                             </div>
                             <div class="col-md-9 text-secondary">
-                                Completed <% if(quiz.Phishing ){ %>
+                                <% if(quiz){ %>
+                                    Completed 
+                                <% if(quiz.Phishing ){ %>
                                     <a class="checkmark"> &checkmark; </a>                                    <% } %>
                                     <% if(!quiz.Phishing ){ %>
                                     <span class="bad">x</span>
+                                    <% } %> 
                                     <% } %> 
                             </div>
                             <div class="col-md-3">
                                 <h5>Malware</h5>
                             </div>
                             <div class="col-md-9 text-secondary">
-                                Completed
+                                <% if(quiz){ %>
+                                    Completed
                                 <% if(quiz.Malware ){ %>
                                     <a class="checkmark"> &checkmark; </a>                                    <% } %>
                                     <% if(!quiz.Malware ){ %>
                                     <span class="bad">x</span>
+                                    <% } %>
                                     <% } %> 
                             </div>
                             <div class="col-md-3">
                                 <h5>Spoofing</h5>
                             </div>
                             <div class="col-md-9 text-secondary">
-                                Completed
+                                <% if(quiz){ %>
+                                    Completed
                                 <% if(quiz.Spoofing ){ %>
                                     <a class="checkmark"> &checkmark; </a>                                    <% } %>
                                     <% if(!quiz.Spoofing ){ %>
                                     <span class="bad">x</span>
+                                    <% } %> 
                                     <% } %> 
                             </div>
                             <div class="col-md-3">
                                 <h5>Denial Of Service Attack</h5>
                             </div>
                             <div class="col-md-9 text-secondary">
-                                Completed
+                                <% if(quiz){ %>
+                                    Completed
                                 <% if(quiz.Dos ){ %>
                                     <a class="checkmark"> &checkmark; </a>                                    <% } %>
                                     <% if(!quiz.Dos ){ %>
                                     <span class="bad">x</span>
+                                    <% } %> 
                                     <% } %> 
                             </div>
                             <div class="col-md-3">
                                 <h5>Hacking</h5>
                             </div>
                             <div class="col-md-9 text-secondary">
-                                Completed <% if(quiz.Hacking ){ %>
+                                <% if(quiz ){ %>
+                                Completed
+                               
+                                 <% if(quiz.Hacking ){ %>
                                     <a class="checkmark"> &checkmark; </a>                                    <% } %>
                                     <% if(!quiz.Hacking ){ %>
                                     <span class="bad">x</span>
+                                    <% } %> 
                                     <% } %> 
                             </div>
                             <div class="col-md-3">
                                 <h5>Social Engineering</h5>
                             </div>
                             <div class="col-md-9 text-secondary">
+                                <% if(quiz ){ %>
                                 Completed
                                 <% if(quiz.Social ){ %>
                                     <a class="checkmark"> &checkmark; </a>                                    <% } %>
                                     <% if(!quiz.Social ){ %>
                                     <span class="bad">x</span>
+                                    <% } %> 
                                     <% } %> 
                             </div>
                         </div>
