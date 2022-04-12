@@ -1,9 +1,9 @@
 const path = require('path')
 const User = require('../models/user.js')
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
     let image = req.files.image;
-    image.mv(path.resolve(__dirname, '..', 'public/img', image.name), async (error) => {
+    await image.mv(path.resolve(__dirname, '..', 'public/img', image.name), async (error) => {
         // var updateUserInfo = await User.findOne({})
         var Uprofile = {
             picture: '/img/' + image.name,
@@ -12,10 +12,10 @@ module.exports = (req, res) => {
             address:req.body.address,
             sex: req.body.sex
         }
-        User.findOneAndUpdate({id:req.session.userId},Uprofile, (error, user) => {
+        User.findByIdAndUpdate(req.session.userId,Uprofile, (error, user) => {
             if (error) {
                 const validationErrors = Object.keys(error.errors).map(key =>
-                    error.errors[key].message)
+                error.errors[key].message)
                 req.flash('validationErrors', validationErrors)
                 req.flash('data', req.body)
                 return res.redirect('/users')
@@ -24,6 +24,7 @@ module.exports = (req, res) => {
             res.redirect('/dashboard')
 
         })
+  
     })
 
 
